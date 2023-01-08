@@ -67,6 +67,13 @@ public class PurchaseSteps {
         checkOutPage.clickCheckOut();
     }
 
+    @Then("User already on check out overview page")
+    public void verifyCheckOutInfoPage(){
+        CheckOutPage checkOutPage = new CheckOutPage(webDriver);
+        Assert.assertTrue(checkOutPage.isDisplayCoOverviewPage());
+    }
+
+
     @And("User input \"(.*)\" as firstname, input \"(.*)\" as lastname, and input \"(.*)\" as postcode")
     public void inputInformation(String fn, String ln, String pc) throws InterruptedException {
         CheckOutPage checkOutPage = new CheckOutPage(webDriver);
@@ -80,11 +87,28 @@ public class PurchaseSteps {
         Thread.sleep(5000);
     }
 
-    @Then("User want to finish CheckOut as products in cart")
+    @Then("User already on checkout summary page")
+    public void verifyCheckOutSummaryPage(){
+        CheckOutPage checkOutPage = new CheckOutPage(webDriver);
+        Assert.assertTrue(checkOutPage.isDisplayCoSumPage());
+    }
+
+    @And("User verify item total, tax, total on checkout summary page")
+    public void verifyDetailTotalCheckOutSummaryPage(){
+        CheckOutPage checkOutPage = new CheckOutPage(webDriver);
+        Assert.assertTrue(checkOutPage.isDisplayTotalCoSumPage());
+    }
+
+    @Then("User want to finish CheckOut and verify as products in cart")
     public void finishCheckout() throws InterruptedException {
         CheckOutPage checkOutPage = new CheckOutPage(webDriver);
         checkOutPage.clickFinish();
-        checkOutPage.isDisplayThanks();
         Thread.sleep(5000);
+    }
+
+    @Then("User has already on Complete the checkout")
+    public void verifyCoCompletePage(){
+        CheckOutPage checkOutPage = new CheckOutPage(webDriver);
+        Assert.assertTrue(checkOutPage.isDisplayThanks());
     }
 }

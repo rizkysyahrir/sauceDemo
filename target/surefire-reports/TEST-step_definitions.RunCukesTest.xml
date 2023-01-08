@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="step_definitions.RunCukesTest" time="5.529" errors="0" skipped="0">
+<testsuite tests="16" failures="0" name="step_definitions.RunCukesTest" time="5.026" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -68,11 +68,16 @@
   <testcase classname="Scenario: Checkout product" name="When User input &quot;standard_user&quot; as userName and input &quot;secret_sauce&quot; as password" time="0"/>
   <testcase classname="Scenario: Checkout product" name="Then User already on landing page" time="0"/>
   <testcase classname="Scenario: Checkout product" name="And User select &quot;Price (low to high)&quot; to Sorting Product" time="0"/>
-  <testcase classname="Scenario: Checkout product" name="And User checkout &quot;Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)&quot; as products to cart" time="0.001"/>
+  <testcase classname="Scenario: Checkout product" name="And User checkout &quot;Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)&quot; as products to cart" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User already on checkout page" time="0"/>
   <testcase classname="Scenario: Checkout product" name="And User verify that &quot;Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)&quot; as products in a list" time="0"/>
   <testcase classname="Scenario: Checkout product" name="And User remove &quot;Test.allTheThings() T-Shirt (Red)&quot; as products in a list" time="0"/>
   <testcase classname="Scenario: Checkout product" name="And User click checkout" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User already on check out overview page" time="0"/>
   <testcase classname="Scenario: Checkout product" name="And User input &quot;febrian&quot; as firstname, input &quot;syahrir&quot; as lastname, and input &quot;1234&quot; as postcode" time="0.001"/>
-  <testcase classname="Scenario: Checkout product" name="Then User want to finish CheckOut as products in cart" time="0"/>
-  <testcase classname="Scenario: Checkout product" name="Scenario: Checkout product" time="5.523"/>
+  <testcase classname="Scenario: Checkout product" name="Then User already on checkout summary page" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="And User verify item total, tax, total on checkout summary page" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User want to finish CheckOut and verify as products in cart" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User has already on Complete the checkout" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Scenario: Checkout product" time="5.021"/>
 </testsuite>

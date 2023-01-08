@@ -21,10 +21,10 @@ public class CheckOutPage {
     private WebElement displayCheckOutPage;
 
     @FindBy(xpath = "//span[.='Checkout: Your Information']")
-    private WebElement displayCheckOutInfoPage;
+    private WebElement displayCoOverviewPage;
 
     @FindBy(xpath = "//span[.='Checkout: Overview']")
-    private WebElement displayCheckOutSummaryPage;
+    private WebElement displayCoSumPage;
 
     @FindBy(xpath = "//span[.='Checkout: Complete!']")
     private WebElement displayCheckOutCompletePage;
@@ -69,16 +69,20 @@ public class CheckOutPage {
         return displayCheckOutPage.isDisplayed();
     }
 
+    public boolean isDisplayCoOverviewPage(){
+        return displayCoOverviewPage.isDisplayed();
+    }
+
     public boolean isDisplayCoSumPage(){
-        return displayCheckOutSummaryPage.isDisplayed();
+        return displayCoSumPage.isDisplayed();
     }
 
     public boolean isDisplayTotalCoSumPage(){
         return displayItemTotal.isDisplayed() && displayTax.isDisplayed() && displayTotal.isDisplayed();
     }
 
-    public void isDisplayThanks(){
-        displayThanks.isDisplayed();
+    public boolean isDisplayThanks(){
+       return displayThanks.isDisplayed();
     }
 
     public boolean isDisplayProduct(String products) {

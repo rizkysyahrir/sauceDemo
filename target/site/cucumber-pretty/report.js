@@ -1,106 +1,109 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/CheckOut.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Payment.feature");
 formatter.feature({
   "line": 2,
-  "name": "Feature Check Out with Filter",
-  "description": "",
-  "id": "feature-check-out-with-filter",
+  "name": "Payment to finish",
+  "description": "As a user i want to finish Payment in Check Out Page",
+  "id": "payment-to-finish",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@CheckOut"
+      "name": "@Payment"
     }
   ]
 });
 formatter.before({
-  "duration": 9080002301,
+  "duration": 6986591600,
   "status": "passed"
 });
 formatter.scenario({
-  "comments": [
-    {
-      "line": 4,
-      "value": "#  Scenario: Filter Product and Add Product To Cart"
-    },
-    {
-      "line": 5,
-      "value": "#    Given User open website sauce demo"
-    },
-    {
-      "line": 6,
-      "value": "#    When User input \"standard_user\" as userName and input \"secret_sauce\" as password"
-    },
-    {
-      "line": 7,
-      "value": "#    And User select \"Price (low to high)\" to Sorting Product"
-    },
-    {
-      "line": 8,
-      "value": "#    And User pick item Sauce Labs Backpack"
-    }
-  ],
-  "line": 10,
+  "line": 5,
   "name": "Checkout product",
   "description": "",
-  "id": "feature-check-out-with-filter;checkout-product",
+  "id": "payment-to-finish;checkout-product",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 11,
+  "line": 6,
   "name": "User open website sauce demo",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 12,
+  "line": 7,
   "name": "User input \"standard_user\" as userName and input \"secret_sauce\" as password",
   "keyword": "When "
 });
 formatter.step({
-  "line": 13,
+  "line": 8,
   "name": "User already on landing page",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 14,
+  "line": 9,
   "name": "User select \"Price (low to high)\" to Sorting Product",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 10,
   "name": "User checkout \"Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)\" as products to cart",
   "keyword": "And "
 });
 formatter.step({
-  "line": 16,
+  "line": 11,
+  "name": "User already on checkout page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 12,
   "name": "User verify that \"Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)\" as products in a list",
   "keyword": "And "
 });
 formatter.step({
-  "line": 17,
+  "line": 13,
   "name": "User remove \"Test.allTheThings() T-Shirt (Red)\" as products in a list",
   "keyword": "And "
 });
 formatter.step({
-  "line": 18,
+  "line": 14,
   "name": "User click checkout",
   "keyword": "And "
 });
 formatter.step({
-  "line": 19,
+  "line": 15,
+  "name": "User already on check out overview page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
   "name": "User input \"febrian\" as firstname, input \"syahrir\" as lastname, and input \"1234\" as postcode",
   "keyword": "And "
 });
 formatter.step({
+  "line": 17,
+  "name": "User already on checkout summary page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 18,
+  "name": "User verify item total, tax, total on checkout summary page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "User want to finish CheckOut and verify as products in cart",
+  "keyword": "Then "
+});
+formatter.step({
   "line": 20,
-  "name": "User want to finish CheckOut as products in cart",
+  "name": "User has already on Complete the checkout",
   "keyword": "Then "
 });
 formatter.match({
   "location": "LoginSteps.verifyDislpay()"
 });
 formatter.result({
-  "duration": 5512095900,
+  "duration": 5320571700,
   "status": "passed"
 });
 formatter.match({
@@ -117,14 +120,14 @@ formatter.match({
   "location": "LoginSteps.inputCredential(String,String)"
 });
 formatter.result({
-  "duration": 699974999,
+  "duration": 653261500,
   "status": "passed"
 });
 formatter.match({
   "location": "PurchaseSteps.verifyLandingPage()"
 });
 formatter.result({
-  "duration": 87983000,
+  "duration": 82000300,
   "status": "passed"
 });
 formatter.match({
@@ -137,7 +140,7 @@ formatter.match({
   "location": "PurchaseSteps.filterProduct(String)"
 });
 formatter.result({
-  "duration": 236495300,
+  "duration": 201306500,
   "status": "passed"
 });
 formatter.match({
@@ -150,7 +153,14 @@ formatter.match({
   "location": "PurchaseSteps.addProductToCart(String)"
 });
 formatter.result({
-  "duration": 10430966500,
+  "duration": 10288511100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PurchaseSteps.verifyCheckOutPage()"
+});
+formatter.result({
+  "duration": 48156900,
   "status": "passed"
 });
 formatter.match({
@@ -163,7 +173,7 @@ formatter.match({
   "location": "PurchaseSteps.verifyListOfProduct(String)"
 });
 formatter.result({
-  "duration": 147832500,
+  "duration": 108423300,
   "status": "passed"
 });
 formatter.match({
@@ -176,14 +186,21 @@ formatter.match({
   "location": "PurchaseSteps.removeListOfProduct(String)"
 });
 formatter.result({
-  "duration": 5116991800,
+  "duration": 5101112600,
   "status": "passed"
 });
 formatter.match({
   "location": "PurchaseSteps.clikcBtnCheckOut()"
 });
 formatter.result({
-  "duration": 114468301,
+  "duration": 97500100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PurchaseSteps.verifyCheckOutInfoPage()"
+});
+formatter.result({
+  "duration": 46643600,
   "status": "passed"
 });
 formatter.match({
@@ -204,18 +221,39 @@ formatter.match({
   "location": "PurchaseSteps.inputInformation(String,String,String)"
 });
 formatter.result({
-  "duration": 14706326600,
+  "duration": 14567045200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PurchaseSteps.verifyCheckOutSummaryPage()"
+});
+formatter.result({
+  "duration": 44837900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PurchaseSteps.verifyDetailTotalCheckOutSummaryPage()"
+});
+formatter.result({
+  "duration": 92769800,
   "status": "passed"
 });
 formatter.match({
   "location": "PurchaseSteps.finishCheckout()"
 });
 formatter.result({
-  "duration": 5181002700,
+  "duration": 5088676500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PurchaseSteps.verifyCoCompletePage()"
+});
+formatter.result({
+  "duration": 41999700,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5521053300,
+  "duration": 5019377100,
   "status": "passed"
 });
 });
